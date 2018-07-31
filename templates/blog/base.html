@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<title>{% block titulo%}{% endblock %}</title>
+</head>
+<body>
+	
+<!--Barra de navegacion-->
+<nav class="pink">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Curso Django</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Inicio</a></li>
+        <li><a href="badges.html">Ver publicaciones</a></li>
+        <li><a href="collapsible.html">Quiénes somos</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Inicio</a></li>
+    <li><a href="badges.html">Ver publicaciones</a></li>
+    <li><a href="collapsible.html">Quiénes somos</a></li>
+   
+  </ul>
+<!--Fin de barra de navegacion-->
+<main>
+	{% block content %}
+
+	{% endblock %}
+</main>
+<!-- inicio de pie pagina-->
+<footer class="page-footer pink">
+         
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 PROTECO CURSO DJANGO
+            <a class="grey-text text-lighten-4 right" href="http://www.proteco.mx">Ir a la pagina de PROTECO</a>
+            </div>
+          </div>
+        </footer>
+            
+</body>
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/materialize.min.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+</html>
